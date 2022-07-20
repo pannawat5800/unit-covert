@@ -36,27 +36,17 @@ const SystemUnitSchema = new Schema({
         type: String,
         require: true,
     },
-    // metric_is: {
-    //     type: UnitSchema,
-    //     require: true
-    // },
-    // customized: {
-    //     type: UnitSchema,
-    // },
-    // imperial: {
-    //     type: UnitSchema,
-    //     require: true
-    // },
+
     date_create: { type: Date, default: Date.now, index: true },
     date_update: { type: Date, default: Date.now, index: true }
 }, { 
-    // toJSON: {
-    //     transform: function (doc, ret) {
-    //         delete ret._v;
-    //         delete ret.date_create;
-    //         delete ret.date_update
-    //     }
-    // },
+    toJSON: {
+        transform: function (doc, ret) {
+            delete ret._v;
+            delete ret.date_create;
+            delete ret.date_update
+        }
+    },
     timestamps: { createdAt: "date_create", updatedAt: 'date_update' } 
 });
 
