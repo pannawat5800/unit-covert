@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+   
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "dist",   
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "baseUrl": "./",
+    "rootDir": "src",
+    "paths": {
+        "*": ["node_modules/*"],
+        "@models/*": ["src/models/*"],
+        "@schema/*": ["src/schema/*"],
+        "@middleware/*": ["src/middleware/*"],
+        "@controller/*": ["src/controller/*"],
+        "@services/*": ["src/services/*"],
+        "@core/*": ["src/core/*"],
+        "@util/*": ["src/utils/*"],
+        "@routes/*": ["src/routes/*"],
+        "@validate/*": ["src/validator/*"]
+    }
+  },
+  "include": [
+        "./src/**/*"
+  ]
+}
